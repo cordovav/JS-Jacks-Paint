@@ -10,7 +10,8 @@ function configureListeners() {
 }
 
 function addOpacity(event) {
-    document.
+    document.body.append(".dim")
+    
     // add appropriate CSS class
     getProductInfo(event.target.id);     
 }
