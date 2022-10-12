@@ -3,16 +3,22 @@ function configureListeners() {
     // select img elements  
 
 
-    for (var i = 0; i < images.length; i++) {        
+    for (let i = 0; i < images.length; i++) {        
+    //document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
+    //document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)
+      
         // iterate over images and add mouseover event listeners
-        document.images[i].addEventListener('mouseover', (event)=>{
-            event.target.style.color = addOpacity(event)
-        })
+       document.images[i].addEventListener('mouseover', (event)=>{
+          event.target.style.color = addOpacity(event)
+       })
     } 
 }
 
 function addOpacity(event) {
-    document.body.append(".dim")
+    //if(!this.classList.contains('dim')){
+    //this.classListadd('dim')
+//}
+    //document.body.append('.dim')
 
     // add appropriate CSS class
     getProductInfo(event.target.id);     
@@ -20,7 +26,10 @@ function addOpacity(event) {
 
 function removeOpacity(event) {
      //remove appropriate CSS class
-    element.removeEventListener()
+  //  if(!this.classList.contains('dim')){
+    //    this.classList.remove('dim');
+    //}
+     //element.removeEventListener()
 
     let element = document.getElementById('color-price');
         element.textContent = '';
@@ -37,56 +46,56 @@ function getProductInfo(paintColor) {
     
     switch (paintColor) {
         case 'pn1':
-            price = '$19.99'
+            price = '$14.99'
             colorName = 'Lime Green'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price     
             break;           
         case 'pn2':
-            price = '$12.99'
+            price = '$11.14'
             colorName = 'Medium Brown'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price    
             break;            
         case 'pn3':
-            price = '$11.99'
+            price = '$22.99'
             colorName = 'Royal Blue'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn4':
-            price = '$14.99'
-            colorName = 'Bright Red'           
+            price = '$13.42'
+            colorName = 'Solid Red'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price  
             break;   
         case 'pn5':
-            price = '$9.99'
+            price = '$21.98'
             colorName = 'Solid White'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price       
             break;   
         case 'pn6':
-            price = '$15.99'
+            price = '$4.99'
             colorName = 'Solid Black'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price        
             break;   
         case 'pn7':
-            price = '$8.99'
-            colorName = 'Medium Blue'           
+            price = '$8.22'
+            colorName = 'Solid Cyan'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price 
             break;   
         case 'pn8':
-            price = '$16.99'
-            colorName = 'Light Purple'           
+            price = '$11.99'
+            colorName = 'Solid Purple'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price   
             break;   
         case 'pn9':
-            price = '$17.99'
-            colorName = 'Bright Yellow'           
+            price = '$14.99'
+            colorName = 'Solid Yellow'           
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price 
             break;   
