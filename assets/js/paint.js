@@ -95,10 +95,14 @@ function getProductInfo(paintColor) {
 
     function updatePrice(colorName, price)
     {       
-        let colorPrice = // select element with corresponding id
+        let colorPrice = document.querySelector('#color-price')
+        colorPrice.textContent = price;
+        // select element with corresponding id
         // display price
         
-        let color = // select element with corresponding id
+        let color = document.querySelector('#color-name')
+        color.textContent = colorName;
+        // select element with corresponding id
         //display color name
     }
     
