@@ -1,23 +1,23 @@
 function configureListeners() {
-    let images = document.querySelectorAll("img")
+    let images = document.getElementsByTagName("img");
     // select img elements  
 
-
+    console.log(images)
     for (let i = 0; i < images.length; i++) {        
-    //document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
-    //document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)
-      
+    document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false)
+    document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)
+        
         // iterate over images and add mouseover event listeners
-       document.images[i].addEventListener('mouseover', (event)=>{
-          event.target.style.color = addOpacity(event)
-       })
-    } 
+     //   document.images[i].addEventListener('mouseover', (event)=>{
+    //        event.target.style.color = addOpacity(event)
+    //    })
+  //  } 
 }
 
 function addOpacity(event) {
-    //if(!this.classList.contains('dim')){
-    //this.classListadd('dim')
-//}
+    if(!this.classList.contains('dim')){
+        this.classList.add('dim')
+}
     //document.body.append('.dim')
 
     // add appropriate CSS class
@@ -26,9 +26,9 @@ function addOpacity(event) {
 
 function removeOpacity(event) {
      //remove appropriate CSS class
-  //  if(!this.classList.contains('dim')){
-    //    this.classList.remove('dim');
-    //}
+    if(this.classList.contains('dim')){
+    this.classList.remove('dim');
+    }
      //element.removeEventListener()
 
     let element = document.getElementById('color-price');
@@ -99,7 +99,7 @@ function getProductInfo(paintColor) {
             updatePrice(colorName, price)
             // set variables for price and color name and invoke a function to update the price 
             break;   
-          default:              
+        default:              
     }
 
     function updatePrice(colorName, price)
@@ -115,4 +115,5 @@ function getProductInfo(paintColor) {
         //display color name
     }
     
+}
 }
